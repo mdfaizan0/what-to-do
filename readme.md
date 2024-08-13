@@ -59,9 +59,10 @@ Stay tuned for more updates as development progresses!
 ## Screenshots
 
 - User Input Container
-<img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 500px; height: auto;"/>
+<img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 350px; height: auto;"/>
+
 - Task View Window
-<img src="screenshots\task-view-window.png" alt="Screenshot" style="max-width: 500px; height: auto;"/>
+<img src="screenshots\task-view-window.png" alt="Screenshot" style="max-width: 350px; height: auto;"/>
 
 ## Installation
 
