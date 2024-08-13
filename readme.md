@@ -58,7 +58,7 @@ Stay tuned for more updates as development progresses!
 
 ## Screenshots
 
-- User Input Container
+- User Input Window
 
 <img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 300px; height: auto;"/>
 
