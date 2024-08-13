@@ -2,10 +2,6 @@
 
 Welcome to "What To Do?", my personal To-Do list app designed to help manage tasks efficiently and stylishly. This project is a showcase of my web development journey, reflecting the core features and functionalities I've implemented.
 
-### 🚧 Work in Progress
-
-Please note that this project is still a work-in-progress. Currently, the focus has been on structuring the layout and applying some basic CSS. The functionality is yet to be developed.
-
 ### 🎯 Key Features
 
 1. **Task Management**: 
@@ -42,6 +38,36 @@ Please note that this project is still a work-in-progress. Currently, the focus 
 2. **UI/UX Enhancements**:
     - More theme options for a personalized look.
     - Enhanced drag-and-drop functionality for better task organization.
+
+### 🚧 Work in Progress
+
+Please note that this project is still a work-in-progress. Recent updates include:
+
+- **Enhanced Layout:** Improved layout structure and design.
+- **CSS Styling:** Applied detailed CSS styling for better visual appeal and responsiveness.
+- **Dark Mode Switch:** Added a toggle for switching between light and dark modes.
+- **Form Design:** Updated the task input form with new styles and improved usability.
+- **Task List Display:** Refined the appearance of task items, including difficulty labels and checkbox interactions.
+
+## Current Focus
+
+- **Functionality Development:** The core functionality of adding, editing, and managing tasks is still under development.
+- **JavaScript Integration:** Implementing JavaScript to handle user interactions and form submissions.
+
+Stay tuned for more updates as development progresses!
+
+## Screenshots
+
+- User Input Container
+<img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 500px; height: auto;"/>
+- Task View Window
+<img src="screenshots\task-view-window.png" alt="Screenshot" style="max-width: 500px; height: auto;"/>
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/what-to-do.git
 
 ---
 
