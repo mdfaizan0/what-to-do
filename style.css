@@ -1,242 +1,324 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-body, html{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: bisque;
-    font-family: "Montserrat", sans-serif;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
+body {
+  background-color: bisque;
+  font-family: "Montserrat", sans-serif;
 }
 
-#logo{
-    font-style: italic;
-    font-weight: 800;
-    padding: 20px;
-    margin: 0;
-    height: 35px;
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-#message{
-    font-weight: 600;
-    text-align: center;
-    position: relative;
+#logo {
+  font-style: italic;
+  font-weight: 800;
+  padding: 20px;
+  margin: 0;
+  height: 35px;
 }
 
-#messagePlus{
-    position: relative;
-    top: 5px;
+#message {
+  font-weight: 600;
+  text-align: center;
+  position: relative;
 }
 
-.message{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+#messagePlus {
+  position: relative;
+  top: 5px;
 }
 
-#message img{
-    height: 30px;
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.container{
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
+#message img {
+  height: 30px;
 }
 
-.container form{
-    display: grid;
-    grid-template-areas: "title title title"
-                         "description description description"
-                         "dueDatelabel difficultylabel button"
-                         "dueDate difficulty button";
-    gap: 16px;
+#plus {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
-#title, #description{
-    grid-column: span 3;
+/* allTask Design start*/
+
+.allTask ul li {
+  list-style: none;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: beige;
+  box-shadow: 12px 12px 2px 1px rgba(4, 255, 0, 0.212);
+  margin: 10px;
+  position: relative;
+  width: 42%;
 }
 
-#title{
-    grid-area: title;
-}
-#description{
-    grid-area: description;
-}
-#dueDatelabel{
-    grid-area: dueDatelabel;
-}
-#difficultylabel{
-    grid-area: difficultylabel;
-}
-#dueDate{
-    grid-area: dueDate;
-}
-#difficulty{
-    grid-area: difficulty;
+.allTask ul li span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 16px;
 }
 
-#button{
-    grid-area: button;
+.allTask ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-wrap: anywhere;
 }
 
-#title, #description{
-    padding: 10px;
+.showDifficulty {
+  position: absolute;
+  right: 20px;
+  top: 0px;
 }
 
-#plus{
-    position: fixed;
-    height: 100px;
-    width: 100px;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
+#easy {
+  background-color: rgba(172, 255, 47, 0.564);
+  color: green;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 4px;
+  border-radius: 4px;
 }
 
-.allTask ul li{
-    list-style: none;
-    font-size: 20px;
-    border: none;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: beige;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.133);
-    width: 40%;
-    margin: 10px;
-    position: relative;
+#medium {
+  background-color: rgba(255, 166, 0, 0.502);
+  color: rgb(255, 111, 0);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 4px;
+  border-radius: 4px;
 }
 
-.allTask ul li span{
-    position: absolute;
-    right: 10px;
-    bottom: 5px;
+#hard {
+  background-color: rgba(255, 0, 0, 0.324);
+  color: rgb(211, 1, 1);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3px 4px;
+  border-radius: 4px;
 }
 
-.allTask ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow-wrap: anywhere;
-}
+/* dark mode switch start*/
 
-.showDifficulty{
-    position: absolute;
-    right: 20px;
-    top: 0px;
-    background-color: #fff;
-}
-
-#easy{
-    background-color: rgba(172, 255, 47, 0.564);
-    color: green;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 3px 4px;
-    border-radius: 4px;
-}
-#medium{
-    background-color: rgba(255, 166, 0, 0.502);
-    color: rgb(255, 111, 0);
-    font-weight: 600;
-    font-size: 16px;
-    padding: 3px 4px;
-    border-radius: 4px;
-}
-
-#hard{
-    background-color: rgba(255, 0, 0, 0.324);
-    color: rgb(211, 1, 1);
-    font-weight: 600;
-    font-size: 16px;
-    padding: 3px 4px;
-    border-radius: 4px;
-}
-
-/* dark mode switch */
-
-.checkbox-wrapper-2{
-    margin: 30px 20px;
-
+.checkbox-wrapper-2 {
+  margin: 30px 20px;
 }
 
 .checkbox-wrapper-2 .ikxBAC {
-    appearance: none;
-    background-color: #dfe1e4;
-    border-radius: 72px;
-    border-style: none;
-    flex-shrink: 0;
-    height: 20px;
-    margin: 0;
-    position: relative;
-    width: 30px;
+  appearance: none;
+  background-color: #dfe1e4;
+  border-radius: 72px;
+  border-style: none;
+  flex-shrink: 0;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  width: 30px;
 }
 
 .checkbox-wrapper-2 .ikxBAC::before {
-    bottom: -6px;
-    content: "";
-    left: -6px;
-    position: absolute;
-    right: -6px;
-    top: -6px;
+  bottom: -6px;
+  content: "";
+  left: -6px;
+  position: absolute;
+  right: -6px;
+  top: -6px;
 }
 
 .checkbox-wrapper-2 .ikxBAC,
 .checkbox-wrapper-2 .ikxBAC::after {
-    transition: all 100ms ease-out;
+  transition: all 100ms ease-out;
 }
 
 .checkbox-wrapper-2 .ikxBAC::after {
-    background-color: #fff;
-    border-radius: 50%;
-    content: "";
-    height: 14px;
-    left: 3px;
-    position: absolute;
-    top: 3px;
-    width: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 14px;
 }
 
-.checkbox-wrapper-2 input[type=checkbox] {
-    cursor: default;
+.checkbox-wrapper-2 input[type="checkbox"] {
+  cursor: default;
 }
 
 .checkbox-wrapper-2 .ikxBAC:hover {
-    background-color: #c9cbcd;
-    transition-duration: 0s;
+  background-color: #c9cbcd;
+  transition-duration: 0s;
 }
 
 .checkbox-wrapper-2 .ikxBAC:checked {
-    background-color: #6e79d6;
+  background-color: #6e79d6;
 }
 
 .checkbox-wrapper-2 .ikxBAC:checked::after {
-    background-color: #fff;
-    left: 13px;
+  background-color: #fff;
+  left: 13px;
 }
 
 .checkbox-wrapper-2 :focus:not(.focus-visible) {
-    outline: 0;
+  outline: 0;
 }
 
 .checkbox-wrapper-2 .ikxBAC:checked:hover {
-    background-color: #535db3;
+  background-color: #535db3;
 }
 
-.checkbox-wrapper-2{
-    display: flex;
-    gap: 5px;
+.checkbox-wrapper-2 {
+  display: flex;
+  gap: 5px;
 }
-/* dark mode switch */
 
+/* dark mode switch end*/
 
+/* allTask design end*/
 
+/* --- */
 
+/* input container design start*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: beige;
+    padding: 16px; /* Increased padding */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 12px 12px 2px 1px rgba(149, 0, 255, 0.188);
+    max-width: 50%; /* Slightly increased width */
+  }
+  
+  .container form {
+    display: grid;
+    grid-template-areas:
+      "title title title"
+      "description description description"
+      "dueDatelabel difficultylabel button"
+      "dueDate difficulty button";
+    gap: 12px; /* Increased gap for breathing room */
+  }
+  
+  #dueDatelabel,
+  #difficultylabel {
+    font-size: 15px; /* Slightly larger font for labels */
+    font-weight: 600;
+    padding-left: 8px;
+    color: #5c5c5c; /* Darker shade for better visibility */
+  }
+  
+  #title,
+  #description {
+    grid-column: span 3;
+  }
+  
+  #title {
+    grid-area: title;
+  }
+  
+  #description {
+    grid-area: description;
+  }
+  
+  #dueDate{
+    grid-area: dueDate;
+  }
+
+  #difficulty{
+    grid-area: difficulty;
+  }
+  
+  #title,
+  #description,
+  #dueDate,
+  #difficulty {
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 12px; /* Adjusted padding for uniformity */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  #title:focus,
+  #description:focus,
+  #dueDate:focus,
+  #difficulty:focus {
+    border: 2px solid rgb(144, 0, 255);
+    box-shadow: 0px 2px 18px -6px rgba(144, 0, 255, 0.4); /* Reduced box-shadow intensity */
+  }
+  
+  /* custom button start*/
+  .button {
+    grid-area: button;
+    justify-self: center;
+    align-self: center;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    width: 50%; /* Reduced width for better balance */
+    height: 2.8rem; /* Adjusted height */
+    position: relative;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .button-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65); /* Adjusted text-shadow for better contrast */
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+      82.3deg,
+      rgba(160, 70, 240, 1) 15%, /* Slightly adjusted gradient colors for better contrast */
+      rgba(48, 70, 240, 1) 85%
+    );
+    transition: all 0.4s;
+  }
+  
+  /* input container design end*/
+  
