@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: bisque;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    font-style: italic;
+    font-weight: 800;
+    padding: 20px;
+    margin: 0;
+    height: 35px;
+}
+
+#message{
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+#messagePlus{
+    position: relative;
+    top: 5px;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#message img{
+    height: 30px;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.container form{
+    display: grid;
+    grid-template-areas: "title title title"
+                         "description description description"
+                         "dueDatelabel difficultylabel button"
+                         "dueDate difficulty button";
+    gap: 16px;
+}
+
+#title, #description{
+    grid-column: span 3;
+}
+
+#title{
+    grid-area: title;
+}
+#description{
+    grid-area: description;
+}
+#dueDatelabel{
+    grid-area: dueDatelabel;
+}
+#difficultylabel{
+    grid-area: difficultylabel;
+}
+#dueDate{
+    grid-area: dueDate;
+}
+#difficulty{
+    grid-area: difficulty;
+}
+
+#button{
+    grid-area: button;
+}
+
+#title, #description{
+    padding: 10px;
+}
+
+#plus{
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.allTask ul li{
+    list-style: none;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: beige;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.133);
+    width: 40%;
+    margin: 10px;
+    position: relative;
+}
+
+.allTask ul li span{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.allTask ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.showDifficulty{
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    background-color: #fff;
+}
+
+#easy{
+    background-color: rgba(172, 255, 47, 0.564);
+    color: green;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 3px 4px;
+    border-radius: 4px;
+}
+#medium{
+    background-color: rgba(255, 166, 0, 0.502);
+    color: rgb(255, 111, 0);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 3px 4px;
+    border-radius: 4px;
+}
+
+#hard{
+    background-color: rgba(255, 0, 0, 0.324);
+    color: rgb(211, 1, 1);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 3px 4px;
+    border-radius: 4px;
+}
+
+/* dark mode switch */
+
+.checkbox-wrapper-2{
+    margin: 30px 20px;
+
+}
+
+.checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+}
+
+.checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.checkbox-wrapper-2 .ikxBAC,
+.checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+}
+
+.checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+}
+
+.checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+}
+
+.checkbox-wrapper-2 .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: #6e79d6;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 13px;
+}
+
+.checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: #535db3;
+}
+
+.checkbox-wrapper-2{
+    display: flex;
+    gap: 5px;
+}
+/* dark mode switch */
+
+
+
+
