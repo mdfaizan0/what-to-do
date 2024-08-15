@@ -64,7 +64,6 @@ nav {
   border-radius: 8px;
   padding: 20px;
   background-color: beige;
-  box-shadow: 12px 12px 2px 1px rgba(4, 255, 0, 0.212);
   margin: 10px;
   position: relative;
   width: 42%;
@@ -91,7 +90,7 @@ nav {
   top: 0px;
 }
 
-#easy {
+#Easy {
   background-color: rgba(172, 255, 47, 0.564);
   color: green;
   font-weight: 600;
@@ -100,7 +99,7 @@ nav {
   border-radius: 4px;
 }
 
-#medium {
+#Medium {
   background-color: rgba(255, 166, 0, 0.502);
   color: rgb(255, 111, 0);
   font-weight: 600;
@@ -109,13 +108,40 @@ nav {
   border-radius: 4px;
 }
 
-#hard {
+#Hard {
   background-color: rgba(255, 0, 0, 0.324);
   color: rgb(211, 1, 1);
   font-weight: 600;
   font-size: 16px;
   padding: 3px 4px;
   border-radius: 4px;
+}
+
+.easy-task {
+  box-shadow: 12px 12px 2px 1px rgba(4, 255, 0, 0.212);
+}
+
+.medium-task {
+  box-shadow: 12px 12px 2px 1px rgba(255, 162, 0, 0.212);
+}
+
+.hard-task {
+  box-shadow: 12px 12px 2px 1px rgba(255, 0, 0, 0.212);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.new-task-animation {
+  animation: fadeIn 0.2s ease-out;
 }
 
 /* dark mode switch start*/
@@ -198,34 +224,109 @@ nav {
 
 /* --- */
 
-/* input container design start*/
-.container {
+/* input newTaskForm design start*/
+
+/* close button start*/
+.close { 
+  box-sizing: border-box;
+  display: inline-block;
+  width: 22px; 
+  height: 22px; 
+  background-color: transparent; 
+  box-shadow: inset 0px 0px 0px 2px #006e93; 
+  border-radius: 50%; 
+  position: absolute;
+  bottom: 37px;
+  right: 30px;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.close:after,
+.close:before {
+  position: absolute;
+  content:"";
+  background-color: #006e93;
+}
+
+.close:after {
+  width: 2px;
+  height: 10px;
+  top: 6px;
+  left: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close:before {
+  width: 10px;
+  height: 2px;
+  top: 10px;
+  left: 6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.close:hover {
+  background: #e60500;
+  box-shadow: none;
+}
+
+.close:hover:after,
+.close:hover:before {
+  background: black;
+}
+/* close button end*/
+
+.newTaskForm {
     max-width: 800px;
     margin: 0 auto;
     background-color: beige;
-    padding: 16px; /* Increased padding */
+    padding: 16px;
     border: none;
     border-radius: 8px;
     box-shadow: 12px 12px 2px 1px rgba(149, 0, 255, 0.188);
-    max-width: 50%; /* Slightly increased width */
+    max-width: 50%;
   }
   
-  .container form {
+  .newTaskForm form {
     display: grid;
     grid-template-areas:
       "title title title"
       "description description description"
       "dueDatelabel difficultylabel button"
       "dueDate difficulty button";
-    gap: 12px; /* Increased gap for breathing room */
+    gap: 12px;
+    position: relative;
   }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .newTaskForm {
+    animation: slideIn 0.2s ease-out;
+  }  
   
   #dueDatelabel,
   #difficultylabel {
-    font-size: 15px; /* Slightly larger font for labels */
+    font-size: 15px;
     font-weight: 600;
     padding-left: 8px;
-    color: #5c5c5c; /* Darker shade for better visibility */
+    color: #5c5c5c;
   }
   
   #title,
@@ -255,9 +356,9 @@ nav {
   #difficulty {
     border: none;
     border-bottom: 2px solid transparent;
-    padding: 12px; /* Adjusted padding for uniformity */
+    padding: 12px;
     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
@@ -268,7 +369,7 @@ nav {
   #dueDate:focus,
   #difficulty:focus {
     border: 2px solid rgb(144, 0, 255);
-    box-shadow: 0px 2px 18px -6px rgba(144, 0, 255, 0.4); /* Reduced box-shadow intensity */
+    box-shadow: 0px 2px 18px -6px rgba(144, 0, 255, 0.4);
   }
   
   /* custom button start*/
@@ -279,8 +380,8 @@ nav {
     font-size: 15px;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
-    width: 50%; /* Reduced width for better balance */
-    height: 2.8rem; /* Adjusted height */
+    width: 50%;
+    height: 2.8rem;
     position: relative;
     overflow: hidden;
     padding: 0 1.5rem;
@@ -299,7 +400,7 @@ nav {
   .button-content {
     position: relative;
     z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65); /* Adjusted text-shadow for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
   }
   
   .button::before {
@@ -314,11 +415,13 @@ nav {
     border-radius: inherit;
     background: linear-gradient(
       82.3deg,
-      rgba(160, 70, 240, 1) 15%, /* Slightly adjusted gradient colors for better contrast */
+      rgba(160, 70, 240, 1) 15%,
       rgba(48, 70, 240, 1) 85%
     );
     transition: all 0.4s;
   }
+
+   /* custom button end*/
   
-  /* input container design end*/
+  /* input newTaskForm design end*/
   
