@@ -36,7 +36,7 @@ Welcome to "What To Do?", my personal To-Do list app designed to help manage tas
 1. **Advanced Features**:
     - User authentication for customized task management.
     - Cloud integration to sync tasks across multiple devices.
-    
+
 2. **UI/UX Enhancements**:
     - More theme options for a personalized look.
     - Enhanced drag-and-drop functionality for better task organization.
@@ -51,6 +51,7 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **Form Design:** Updated the task input form with new styles and improved usability.
 - **Task List Display:** Refined the appearance of task items, including difficulty labels and checkbox interactions.
 - **Form Submission:** Implemented logic to handle task submission and update the task list.
+- **Enhanced Task Visualization:** Implemented color-coded difficulty levels with matching box shadows for a clear and vibrant task overview.
 
 ## Current Focus
 
