@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/wtd-favicon.png" type="image/x-icon" />
 </head>
 
-<body>
+<body class="body">
     <nav>
         <div class="logo">
             <img id="logo" src="assets/wtd-white.png" alt="" />
@@ -19,52 +19,37 @@
             <label for="sc-gJwTLC ikxBAC" id="dark">Dark Mode</label>
         </div>
     </nav>
-
     <div class="message">
-        <h2 id="message">Click <span><img src="assets/plus.png" alt="plus icon" id="messagePlus" /></span> to create a task.</h2>
+        <h2 id="message">
+            Click
+            <span><img src="assets/plus.png" alt="plus icon" id="messagePlus" /></span>
+            to create a task.
+        </h2>
     </div>
-    <div class="allTask">
-        <ul>
-            <li>
-                <h3>Task 1</h3>
-                <p>I have to make a To-Do list app. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat enim ipsam veniam ducimus eius harum est numquam sapiente dolor tempore, beatae, excepturi, rem quis illum?</p>
-                <span><input type="checkbox" name="complete" id="complete" /> Mark as
-                    complete</span>
-                <p class="showDifficulty" id="easy">Easy</p>
-            </li>
-            <li>
-                <h3>Task 1</h3>
-                <p>I have to make a To-Do list app. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat enim ipsam veniam ducimus eius harum est numquam sapiente dolor tempore, beatae, excepturi, rem quis illum?</p>
-                <span><input type="checkbox" name="complete" id="complete" /> Mark as
-                    complete</span>
-                    <p class="showDifficulty" id="medium">Medium</p>
-                    
-            </li>
-            <li>
-                <h3>Task 1</h3>
-                <p>I have to make a To-Do list app. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat enim ipsam veniam ducimus eius harum est numquam sapiente dolor tempore, beatae, excepturi, rem quis illum?</p>
-                <span><input type="checkbox" name="complete" id="complete" /> Mark as
-                    complete</span>
-                    <p class="showDifficulty" id="hard">Hard</p>
-            </li>
-        </ul>
-    </div> 
-    <!-- <div class="container">
-        <form>
+    <!-- Just for reference, for future purposes -->
+    <!-- <div class="newTaskForm">
+        <form class="newForm">
             <input type="text" id="title" placeholder="Add a title here" />
             <textarea name="description" id="description" placeholder="Add a description here"></textarea>
             <label for="dueDate" id="dueDatelabel">Due Date</label>
             <label for="difficulty" id="difficultylabel">Difficulty</label>
             <input type="date" name="dueDate" id="dueDate" />
             <select name="difficulty" id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
             </select>
-            <button class="button"><span class="button-content">Add Task</span></button>
+            <button class="button">
+                <span class="button-content">Add Task</span>
+            </button>
+            <div class="box">
+                <div class="close"></div>
+            </div>
         </form>
     </div> -->
-
+    <div class="allTask">
+      <ul id="ul"></ul>
+    </div>
     <img src="assets/plus.png" alt="plus icon" id="plus" />
 </body>
 <script src="script.js"></script>
