@@ -52,11 +52,12 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **Task List Display:** Refined the appearance of task items, including difficulty labels and checkbox interactions.
 - **Form Submission:** Implemented logic to handle task submission and update the task list.
 - **Enhanced Task Visualization:** Implemented color-coded difficulty levels with matching box shadows for a clear and vibrant task overview.
+- **Task Animations:** Introduced animations for task creation and addition, adding more life to "What To Do?"
 
 ## Current Focus
 
 - **Functionality Development:** The core functionality of adding, editing, and managing tasks is still under development.
-- **JavaScript Integration:** Implementing JavaScript to handle user interactions and form submissions.
+- **JavaScript Integration:** Implementing JavaScript to handle user interactions and form additions, submissions and deletions.
 
 Stay tuned for more updates as development progresses!
 
