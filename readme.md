@@ -25,6 +25,7 @@ Welcome to "What To Do?", my personal To-Do list app designed to help manage tas
 2. **CSS Styling**:
     - Responsive design with a focus on usability and aesthetics.
     - Clean styles for inputs, buttons, and task items.
+    - Color-coded task difficulty for a visually intuitive task management experience.
 
 3. **JavaScript Functionality**:
     - Add, delete, and complete tasks with ease.
@@ -35,6 +36,7 @@ Welcome to "What To Do?", my personal To-Do list app designed to help manage tas
 1. **Advanced Features**:
     - User authentication for customized task management.
     - Cloud integration to sync tasks across multiple devices.
+    
 2. **UI/UX Enhancements**:
     - More theme options for a personalized look.
     - Enhanced drag-and-drop functionality for better task organization.
@@ -48,6 +50,7 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **Dark Mode Switch:** Added a toggle for switching between light and dark modes.
 - **Form Design:** Updated the task input form with new styles and improved usability.
 - **Task List Display:** Refined the appearance of task items, including difficulty labels and checkbox interactions.
+- **Form Submission:** Implemented logic to handle task submission and update the task list.
 
 ## Current Focus
 
@@ -58,11 +61,13 @@ Stay tuned for more updates as development progresses!
 
 ## Screenshots
 
-- User Input Container
-<img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 350px; height: auto;"/>
+- User Input Window
+
+<img src="screenshots\user-input-container.png" alt="Screenshot" style="max-width: 300px; height: auto;"/>
 
 - Task View Window
-<img src="screenshots\task-view-window.png" alt="Screenshot" style="max-width: 350px; height: auto;"/>
+
+<img src="screenshots\task-view-window.png" alt="Screenshot" style="max-width: 300px; height: auto;"/>
 
 ## Installation
 
