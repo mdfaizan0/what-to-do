@@ -350,6 +350,11 @@ nav {
     grid-area: difficulty;
   }
   
+  #title{
+    color: black;
+    font-weight: 800;
+  }
+  
   #title,
   #description,
   #dueDate,
