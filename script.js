@@ -36,11 +36,23 @@ plusIcon.addEventListener("click", function (event) {
     const form = document.querySelector(".newForm");
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const titleValue = document.getElementById("title").value;
-        const descriptionValue = document.getElementById("description").value;
-        const difficultyValue = document.getElementById("difficulty").value;
+        const titleValue = document.getElementById("title").value.trim();
+        const descriptionValue = document
+            .getElementById("description")
+            .value.trim();
+        const difficultyValue = document.getElementById("difficulty").value.trim();
         const ul = document.querySelector("#ul");
         const newTaskLi = document.createElement("li");
+        const taskObj = {
+            titleValue: titleValue,
+            descriptionValue: descriptionValue,
+            difficultyValue: difficultyValue,
+        };
+
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks.push(taskObj); 
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
         if (difficultyValue === "Easy") {
             newTaskLi.setAttribute("class", "easy-task new-task-animation");
         } else if (difficultyValue === "Medium") {
@@ -48,6 +60,7 @@ plusIcon.addEventListener("click", function (event) {
         } else if (difficultyValue === "Hard") {
             newTaskLi.setAttribute("class", "hard-task new-task-animation");
         }
+
         const newTaskDiv = document.createElement("div");
         const formContainer = document.querySelector(".newTaskForm");
         newTaskDiv.setAttribute("class", "task");
