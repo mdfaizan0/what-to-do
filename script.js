@@ -1,7 +1,44 @@
+// Global Variables
 const plusIcon = document.getElementById("plus");
 const body = document.querySelector("body");
 const allTask = document.querySelector(".allTask"); //reference
 
+
+// Function to display tasks from local storage
+function displayTasks() {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const ul = document.querySelector("#ul");
+
+    tasks.forEach((taskObj) => {
+        const newTaskLi = document.createElement("li");
+
+        if (taskObj.difficultyValue === "Easy") {
+            newTaskLi.setAttribute("class", "easy-task new-task-animation");
+        } else if (taskObj.difficultyValue === "Medium") {
+            newTaskLi.setAttribute("class", "medium-task new-task-animation");
+        } else if (taskObj.difficultyValue === "Hard") {
+            newTaskLi.setAttribute("class", "hard-task new-task-animation");
+        }
+
+        const newTaskDiv = document.createElement("div");
+        newTaskDiv.setAttribute("class", "task");
+        newTaskDiv.innerHTML = `
+            <h3>${taskObj.titleValue}</h3>
+            <p>${taskObj.descriptionValue}</p>
+            <span>
+                <input type="checkbox" name="complete" id="complete" /> Mark as complete
+            </span>
+            <p class="showDifficulty" id="${taskObj.difficultyValue}">${taskObj.difficultyValue}</p>
+        `;
+        newTaskLi.appendChild(newTaskDiv);
+        ul.insertAdjacentElement("afterbegin", newTaskLi);
+    });
+}
+
+// Call displayTasks when the page loads
+document.addEventListener("DOMContentLoaded", displayTasks);
+
+// Listening click to Plus Icon at bottom-right
 plusIcon.addEventListener("click", function (event) {
     const existingForm = document.querySelector(".newTaskForm");
     if (!existingForm) {
@@ -33,6 +70,7 @@ plusIcon.addEventListener("click", function (event) {
         });
     }
 
+    //Adding New Task Form
     const form = document.querySelector(".newForm");
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -53,13 +91,13 @@ plusIcon.addEventListener("click", function (event) {
         tasks.push(taskObj); 
         localStorage.setItem("tasks", JSON.stringify(tasks));
 
-        if (difficultyValue === "Easy") {
-            newTaskLi.setAttribute("class", "easy-task new-task-animation");
-        } else if (difficultyValue === "Medium") {
-            newTaskLi.setAttribute("class", "medium-task new-task-animation");
-        } else if (difficultyValue === "Hard") {
-            newTaskLi.setAttribute("class", "hard-task new-task-animation");
-        }
+            if (difficultyValue === "Easy") {
+                newTaskLi.setAttribute("class", "easy-task new-task-animation");
+            } else if (difficultyValue === "Medium") {
+                newTaskLi.setAttribute("class", "medium-task new-task-animation");
+            } else if (difficultyValue === "Hard") {
+                newTaskLi.setAttribute("class", "hard-task new-task-animation");
+            }
 
         const newTaskDiv = document.createElement("div");
         const formContainer = document.querySelector(".newTaskForm");
