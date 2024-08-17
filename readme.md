@@ -53,6 +53,7 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **Form Submission:** Implemented logic to handle task submission and update the task list.
 - **Enhanced Task Visualization:** Implemented color-coded difficulty levels with matching box shadows for a clear and vibrant task overview.
 - **Task Animations:** Introduced animations for task creation and addition, adding more life to "What To Do?"
+- **Local Storage Persistence:** Implemented local storage functionality to persist tasks across sessions, ensuring tasks are automatically retrieved and displayed when the application is loaded.
 
 ## Current Focus
 
