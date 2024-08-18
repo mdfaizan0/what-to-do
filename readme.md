@@ -54,11 +54,16 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **Enhanced Task Visualization:** Implemented color-coded difficulty levels with matching box shadows for a clear and vibrant task overview.
 - **Task Animations:** Introduced animations for task creation and addition, adding more life to "What To Do?"
 - **Local Storage Persistence:** Implemented local storage functionality to persist tasks across sessions, ensuring tasks are automatically retrieved and displayed when the application is loaded.
+- **Completion Toggle with Persistence:** Implemented a completion toggle feature for tasks with strike-through effect, ensuring that task completion states are retained even after page reloads.
+- **Task Deletion with Local Storage Sync:** Enhanced the task deletion functionality to accurately remove tasks both from the UI and local storage, ensuring a seamless and consistent user experience across sessions.
 
-## Current Focus
+## 🔍 Current Focus
 
-- **Functionality Development:** The core functionality of adding, editing, and managing tasks is still under development.
-- **JavaScript Integration:** Implementing JavaScript to handle user interactions and form additions, submissions and deletions.
+- **Functionality Development:** The core functionality of editing and managing tasks is still under development.
+- **JavaScript Integration:** Refining JavaScript for advanced features, including animations and enhanced task interactions.
+- **Task Visuals:** Ensuring consistent and accurate visual feedback for task states, including the dynamic display of task details and completion status.
+- **Persistence and Updates:** Improving the persistence and updates of task states across sessions, ensuring tasks are accurately managed and displayed from local storage.
+
 
 Stay tuned for more updates as development progresses!
 
