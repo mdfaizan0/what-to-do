@@ -16,6 +16,12 @@ nav {
   justify-content: space-between;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #logo {
   font-style: italic;
   font-weight: 800;
@@ -57,6 +63,15 @@ nav {
 
 /* allTask Design start*/
 
+.task-completed{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.task h3{
+  padding-top: 15px;
+}
+
 .allTask ul li {
   list-style: none;
   font-size: 16px;
@@ -84,11 +99,61 @@ nav {
   overflow-wrap: anywhere;
 }
 
-.showDifficulty {
+.options {
+  position: absolute;
+  right: 2%;
+  top: -8%;
+  flex-direction: row;
+  gap: 18px;
+}
+
+/* .showDifficulty {
   position: absolute;
   right: 20px;
   top: 0px;
+} */
+
+
+.standingBrace {
+  /* position: absolute;
+  top: -11px;
+  right: 80px; */
+  font-size: 24px;
+  font-weight: 600;
 }
+
+/* .deleteTask {
+  position: absolute;
+  right: 13%;
+  top: 8%;
+} */
+
+.deleteTask {
+  background-color: transparent;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.deleteTask:hover {
+  background-color: #e60000;
+}
+
+.deleteTask:active {
+  background-color: #cc0000;
+}
+
 
 #Easy {
   background-color: rgba(172, 255, 47, 0.564);
@@ -134,6 +199,7 @@ nav {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -227,14 +293,14 @@ nav {
 /* input newTaskForm design start*/
 
 /* close button start*/
-.close { 
+.close {
   box-sizing: border-box;
   display: inline-block;
-  width: 22px; 
-  height: 22px; 
-  background-color: transparent; 
-  box-shadow: inset 0px 0px 0px 2px #006e93; 
-  border-radius: 50%; 
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 0px 2px #006e93;
+  border-radius: 50%;
   position: absolute;
   bottom: 37px;
   right: 30px;
@@ -245,7 +311,7 @@ nav {
 .close:after,
 .close:before {
   position: absolute;
-  content:"";
+  content: "";
   background-color: #006e93;
 }
 
@@ -282,151 +348,150 @@ nav {
 .close:hover:before {
   background: black;
 }
+
 /* close button end*/
 
 .newTaskForm {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: beige;
-    padding: 16px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 12px 12px 2px 1px rgba(149, 0, 255, 0.188);
-    max-width: 50%;
-  }
-  
-  .newTaskForm form {
-    display: grid;
-    grid-template-areas:
-      "title title title"
-      "description description description"
-      "dueDatelabel difficultylabel button"
-      "dueDate difficulty button";
-    gap: 12px;
-    position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: beige;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 12px 12px 2px 1px rgba(149, 0, 255, 0.188);
+  max-width: 50%;
+}
+
+.newTaskForm form {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "description description description"
+    "dueDatelabel difficultylabel button"
+    "dueDate difficulty button";
+  gap: 12px;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .newTaskForm {
-    animation: slideIn 0.2s ease-out;
-  }  
-  
-  #dueDatelabel,
-  #difficultylabel {
-    font-size: 15px;
-    font-weight: 600;
-    padding-left: 8px;
-    color: #5c5c5c;
-  }
-  
-  #title,
-  #description {
-    grid-column: span 3;
-  }
-  
-  #title {
-    grid-area: title;
-  }
-  
-  #description {
-    grid-area: description;
-  }
-  
-  #dueDate{
-    grid-area: dueDate;
-  }
+}
 
-  #difficulty{
-    grid-area: difficulty;
-  }
-  
-  #title{
-    color: black;
-    font-weight: 800;
-  }
-  
-  #title,
-  #description,
-  #dueDate,
-  #difficulty {
-    border: none;
-    border-bottom: 2px solid transparent;
-    padding: 12px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    background-color: transparent;
-    font-family: "Montserrat", sans-serif;
-  }
-  
-  #title:focus,
-  #description:focus,
-  #dueDate:focus,
-  #difficulty:focus {
-    border: 2px solid rgb(144, 0, 255);
-    box-shadow: 0px 2px 18px -6px rgba(144, 0, 255, 0.4);
-  }
-  
-  /* custom button start*/
-  .button {
-    grid-area: button;
-    justify-self: center;
-    align-self: center;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    width: 50%;
-    height: 2.8rem;
-    position: relative;
-    overflow: hidden;
-    padding: 0 1.5rem;
-    border-radius: 1.5rem;
-    background: #3d3a4e;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .button-content {
-    position: relative;
-    z-index: 1;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
-  }
-  
-  .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
+.newTaskForm {
+  animation: slideIn 0.2s ease-out;
+}
+
+#dueDatelabel,
+#difficultylabel {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #5c5c5c;
+}
+
+#title,
+#description {
+  grid-column: span 3;
+}
+
+#title {
+  grid-area: title;
+}
+
+#description {
+  grid-area: description;
+}
+
+#dueDate {
+  grid-area: dueDate;
+}
+
+#difficulty {
+  grid-area: difficulty;
+}
+
+#title {
+  color: black;
+  font-weight: 800;
+}
+
+#title,
+#description,
+#dueDate,
+#difficulty {
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+#title:focus,
+#description:focus,
+#dueDate:focus,
+#difficulty:focus {
+  border: 2px solid rgb(144, 0, 255);
+  box-shadow: 0px 2px 18px -6px rgba(144, 0, 255, 0.4);
+}
+
+/* custom button start*/
+.button {
+  grid-area: button;
+  justify-self: center;
+  align-self: center;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  height: 2.8rem;
+  position: relative;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(82.3deg,
       rgba(160, 70, 240, 1) 15%,
-      rgba(48, 70, 240, 1) 85%
-    );
-    transition: all 0.4s;
-  }
+      rgba(48, 70, 240, 1) 85%);
+  transition: all 0.4s;
+}
 
-   /* custom button end*/
-  
-  /* input newTaskForm design end*/
-  
+/* custom button end*/
+
+/* input newTaskForm design end*/
