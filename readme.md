@@ -63,6 +63,7 @@ Please note that this project is still a work-in-progress. Recent updates includ
 - **JavaScript Integration:** Refining JavaScript for advanced features, including animations and enhanced task interactions.
 - **Task Visuals:** Ensuring consistent and accurate visual feedback for task states, including the dynamic display of task details and completion status.
 - **Persistence and Updates:** Improving the persistence and updates of task states across sessions, ensuring tasks are accurately managed and displayed from local storage.
+- **Dark Mode:** Integrating dark mode is also in progress, with further updates anticipated as we refine core features.
 
 
 Stay tuned for more updates as development progresses!
