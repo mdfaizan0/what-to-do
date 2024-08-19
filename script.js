@@ -107,7 +107,9 @@ plusIcon.addEventListener("click", function () {
         const difficultyValue = document.getElementById("difficulty").value.trim();
         const ul = document.querySelector("#ul");
         const newTaskLi = document.createElement("li");
+        const taskid = Math.random().toString(36).slice(2);
         const taskObj = {
+            id:taskid,
             titleValue: titleValue,
             descriptionValue: descriptionValue,
             difficultyValue: difficultyValue,
@@ -160,7 +162,7 @@ plusIcon.addEventListener("click", function () {
         const deleteTask = newTaskDiv.querySelector(".deleteTask");
         deleteTask.addEventListener("click", function () {
             newTaskLi.remove();
-            const updatedTasks = tasks.filter(t => t.titleValue !== taskObj.titleValue);
+            const updatedTasks = tasks.filter(t => t.id !== taskObj.id);
             localStorage.setItem("tasks", JSON.stringify(updatedTasks));
         });
     });
